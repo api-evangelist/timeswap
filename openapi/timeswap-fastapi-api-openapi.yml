@@ -1,0 +1,20 @@
+openapi: 3.0.2
+info:
+  title: Fast FastAPI API
+  version: 0.1.0
+tags:
+- name: FastAPI
+paths:
+  /:
+    get:
+      summary: Index
+      operationId: index__get
+      responses:
+        '200':
+          description: Successful Response
+          content:
+            application/json:
+              schema:
+                type: string
+      tags:
+      - FastAPI

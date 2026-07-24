@@ -1,0 +1,64 @@
+openapi: 3.0.2
+info:
+  title: Fast FastAPI TaskON API
+  version: 0.1.0
+tags:
+- name: TaskON
+paths:
+  /taskON/quest:
+    get:
+      summary: Get Quest Data
+      operationId: get_quest_data_taskON_quest_get
+      parameters:
+      - required: false
+        schema:
+          title: Address
+          type: string
+        name: address
+        in: query
+      responses:
+        '200':
+          description: Successful Response
+          content:
+            application/json:
+              schema: {}
+        '422':
+          description: Validation Error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/HTTPValidationError'
+      tags:
+      - TaskON
+components:
+  schemas:
+    HTTPValidationError:
+      title: HTTPValidationError
+      type: object
+      properties:
+        detail:
+          title: Detail
+          type: array
+          items:
+            $ref: '#/components/schemas/ValidationError'
+    ValidationError:
+      title: ValidationError
+      required:
+      - loc
+      - msg
+      - type
+      type: object
+      properties:
+        loc:
+          title: Location
+          type: array
+          items:
+            anyOf:
+            - type: string
+            - type: integer
+        msg:
+          title: Message
+          type: string
+        type:
+          title: Error Type
+          type: string
