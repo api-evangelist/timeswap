@@ -1,0 +1,47 @@
+# Timeswap
+
+## Timeswap
+
+- [What is Timeswap?](https://timeswap.gitbook.io/docs/introduction/introduction.md): An overview of what Timeswap is, its key features, and a quick navigation guide
+- [Market Participants](https://timeswap.gitbook.io/docs/introduction/market-participants.md): There are three main market participants in Timeswap: 1) lenders, 2) borrowers, and 3) liquidity providers (LPs)
+- [Lenders](https://timeswap.gitbook.io/docs/introduction/market-participants/lenders.md): Lenders are users who fund Timeswap pools -- to allow borrowers to borrow from -- in return for earning a fixed interest
+- [Borrowers](https://timeswap.gitbook.io/docs/introduction/market-participants/borrowers.md): Borrowers are users who borrow from Timeswap pools -- where liquidity is seeded by lenders and liquidity providers -- without needing to manage their positions (as there are no liquidations) in return
+- [Liquidity Providers (LPs)](https://timeswap.gitbook.io/docs/introduction/market-participants/lp.md): Liquidity providers (LPs) are users who provide liquidity to Timeswap pools -- to act as the counterparty to lenders and borrowers -- in return for transaction fees
+- [How it Works](https://timeswap.gitbook.io/docs/introduction/pool-params.md): A practical guide to Timeswap pools
+- [Use Cases](https://timeswap.gitbook.io/docs/introduction/use-cases.md): The main use cases of Timeswap
+- [How to Connect](https://timeswap.gitbook.io/docs/user-guide/connect-guide.md)
+- [How to Lend](https://timeswap.gitbook.io/docs/user-guide/lend-guide.md)
+- [How to Borrow](https://timeswap.gitbook.io/docs/user-guide/borrow-guide.md)
+- [How to LP](https://timeswap.gitbook.io/docs/user-guide/lp-guide.md)
+- [Lending FAQ](https://timeswap.gitbook.io/docs/faq/lending.md)
+- [Borrowing FAQ](https://timeswap.gitbook.io/docs/faq/borrowing.md)
+- [LP FAQ](https://timeswap.gitbook.io/docs/faq/lp.md)
+- [Audits](https://timeswap.gitbook.io/docs/audits.md)
+- [The AMM](https://timeswap.gitbook.io/docs/deep-dive/amm.md): The core mechanism of Timeswap
+- [Lending](https://timeswap.gitbook.io/docs/deep-dive/lending.md)
+- [Borrowing](https://timeswap.gitbook.io/docs/deep-dive/borrowing.md)
+- [Liquidity Provision](https://timeswap.gitbook.io/docs/deep-dive/lp.md)
+- [Pool Creation](https://timeswap.gitbook.io/docs/deep-dive/lp/pool-creation.md)
+- [Tokenomics](https://timeswap.gitbook.io/docs/deep-dive/tokenomics.md)
+- [Rewards Mechanism](https://timeswap.gitbook.io/docs/deep-dive/rewards-mechanism.md)
+- [TIME premine](https://timeswap.gitbook.io/docs/deep-dive/rewards-mechanism/time-premine.md)
+- [Utilisation Curve](https://timeswap.gitbook.io/docs/deep-dive/utilisation-curve.md)
+- [Deployed V2 Contracts](https://timeswap.gitbook.io/docs/developers/deployed-v2-contracts.md)
+- [Important Links](https://timeswap.gitbook.io/docs/resources/links.md)
+- [Glossary](https://timeswap.gitbook.io/docs/resources/glossary.md)
+
+
+---
+
+# Agent Instructions
+This documentation is published with GitBook. GitBook is the documentation platform designed so that both humans and AI agents can read, navigate, and reason over technical content effectively. Learn more at gitbook.com.
+
+## Querying This Documentation
+If you need additional information, you can query the documentation dynamically by asking a question.
+Perform an HTTP GET request on a page URL with the `ask` query parameter:
+```
+GET https://timeswap.gitbook.io/docs/introduction/introduction.md?ask=<question>
+```
+The question should be specific, self-contained, and written in natural language.
+The response will contain a direct answer to the question and relevant excerpts and sources from the documentation.
+Use this mechanism when the answer is not explicitly present in the current page, you need clarification or additional context, or you want to retrieve related documentation sections.

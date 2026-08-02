@@ -1,0 +1,16 @@
+generated: '2026-07-21'
+method: derived
+source: openapi/timeswap-api-openapi.json
+notes: >-
+  The live api.timeswap.io OpenAPI declares no securitySchemes and no
+  operation-level security requirements — the read endpoints are publicly
+  accessible without credentials. The docs publish no API authentication
+  page. Access to the protocol itself is via wallet signatures on-chain
+  (the dApp at app.timeswap.io connects a Web3 wallet), not via API keys
+  or OAuth on this HTTP API.
+summary:
+  types: []
+  api_key_in: []
+  oauth2_flows: []
+  public_unauthenticated: true
+schemes: []

@@ -1,0 +1,36 @@
+generated: '2026-07-21'
+method: derived
+source: openapi/timeswap-api-openapi.json
+notes: >-
+  Cross-cutting request/response semantics derived from the live
+  api.timeswap.io OpenAPI (a FastAPI service backing the Timeswap dApp).
+  The docs (timeswap.gitbook.io/docs) are protocol/user docs and publish no
+  HTTP API conventions of their own.
+authentication:
+  style: none
+  detail: No securitySchemes; endpoints are publicly readable. See authentication/timeswap-authentication.yml.
+idempotency:
+  supported: false
+  detail: No idempotency key header or retry contract is documented.
+pagination:
+  style: none
+  detail: Collection endpoints (e.g. /pools/pools/get) return full result sets filtered by query params; no cursor/offset parameters.
+filtering:
+  style: query-parameters
+  params: [chain_id, token0_address, token1_address, is_prod, chainId, address, poolId, refresh]
+caching:
+  detail: Several price endpoints accept a `refresh` boolean to bypass the server-side cache.
+field_expansion: none
+metadata: none
+request_tracing:
+  header: null
+  detail: No request-id header is documented.
+versioning:
+  style: none
+  detail: No URI/header versioning on the HTTP API; the protocol versions at the contract level (V1/V2). See lifecycle/timeswap-lifecycle.yml.
+error_envelope:
+  shape: fastapi-validation
+  detail: 422 HTTPValidationError with detail[] of {loc, msg, type}. See errors/timeswap-problem-types.yml.
+rate_limits:
+  signaling: none
+  detail: No rate-limit headers or policy documented.

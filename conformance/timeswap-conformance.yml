@@ -1,0 +1,37 @@
+generated: '2026-07-21'
+method: searched
+source: https://timeswap.gitbook.io/docs/audits
+notes: >-
+  Timeswap is an on-chain DeFi lending protocol; its compliance surface is
+  third-party smart-contract security audits rather than SaaS certifications.
+  Cross-cutting API standards asserted from the live api.timeswap.io OpenAPI
+  (openapi/timeswap-api-openapi.json).
+audits:
+  - name: Code4rena audit contest (January 2023)
+    url: https://code4rena.com/reports/2023-01-timeswap
+  - name: PeckShield audit report
+    url: https://app.timeswap.io/documents/PeckShield-audit-report.pdf
+  - name: Trust Security audit
+    url: https://www.trust-security.xyz/timeswap-audit
+standards:
+  - id: oauth2
+    conforms: false
+    evidence: No oauth2 securitySchemes in the OpenAPI; API endpoints are unauthenticated.
+  - id: oidc
+    conforms: false
+    evidence: /.well-known/openid-configuration returned 404 on all hosts.
+  - id: rfc9457-problem-details
+    conforms: false
+    evidence: Errors use FastAPI HTTPValidationError (application/json), not application/problem+json.
+  - id: json-schema-validation-errors
+    conforms: true
+    evidence: 422 responses reference the HTTPValidationError/ValidationError schemas (FastAPI/Pydantic).
+  - id: pagination
+    conforms: false
+    evidence: No pagination parameters or envelopes appear in the OpenAPI.
+  - id: idempotency
+    conforms: false
+    evidence: No idempotency key header or contract documented in the OpenAPI or docs.
+  - id: smart-contract-audits
+    conforms: true
+    evidence: Audits page publishes Code4rena, PeckShield, and Trust Security reports (https://timeswap.gitbook.io/docs/audits).

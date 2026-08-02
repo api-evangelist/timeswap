@@ -1,0 +1,22 @@
+{
+  "provider": "timeswap",
+  "sources": [
+    "timeswap-fastapi-api-openapi.yml",
+    "timeswap-paulygon-api-openapi.yml",
+    "timeswap-pools-api-openapi.yml",
+    "timeswap-taskon-api-openapi.yml",
+    "timeswap-token-api-openapi.yml"
+  ],
+  "outputs": [
+    "timeswap-fastapi-api-openapi.yml",
+    "timeswap-paulygon-api-openapi.yml",
+    "timeswap-pools-api-openapi.yml",
+    "timeswap-taskon-api-openapi.yml",
+    "timeswap-token-api-openapi.yml"
+  ],
+  "archived": [],
+  "errors": [],
+  "warnings": [],
+  "notes": [],
+  "skipped": []
+}

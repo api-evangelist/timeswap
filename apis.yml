@@ -1,27 +1,160 @@
 aid: timeswap
 name: Timeswap
-description: 'Timeswap is a company surfaced as a portfolio company of multicoin-capital and added to
-  the API Evangelist network as a stub for enrichment. Sector: crypto-web3. This profile is a lead awaiting
-  the enrichment pipeline.'
+description: >-
+  Timeswap is a decentralized fixed-maturity lending and borrowing protocol
+  built by Timeswap Labs. Its AMM lets lenders earn fixed interest, borrowers
+  take non-liquidatable loans against any ERC-20 collateral, and liquidity
+  providers act as the counterparty, across pools on multiple EVM chains.
+  Alongside the on-chain V2 contracts, Timeswap runs a public backend API at
+  api.timeswap.io serving pools, caps, tokens, and spot prices to its dApp,
+  and publishes TypeScript SDK packages under the @timeswap-labs npm scope.
 url: https://raw.githubusercontent.com/api-evangelist/timeswap/refs/heads/main/apis.yml
 x-type: company
 x-source: vc-portfolio
 x-backed-by:
 - multicoin-capital
-x-tier: stub
-x-tier-reason: portfolio-lead
+x-tier: profile
+x-tier-reason: enriched-from-portfolio-lead
+accessModel:
+  pricing: unknown
+  onboarding: open
+  trial: false
+  try_now: false
+  public: true
+  label: Open access
+  confidence: medium
+  source:
+  - authentication
+  generated: '2026-07-22'
+  method: derived
 specificationVersion: '0.20'
 created: '2026-07-17'
-modified: '2026-07-17'
+modified: '2026-07-21'
+image: https://avatars.githubusercontent.com/u/75018723?v=4
 tags:
 - Company
 - Crypto Web3
-apis: []
+- DeFi
+- Lending
+- Borrowing
+- Liquidity Pools
+- Fixed Income
+- Blockchain
+apis:
+- aid: timeswap:timeswap-fastapi-api
+  name: Timeswap FastAPI API
+  description: The FastAPI API from Timeswap — 1 operation(s) for fastapi.
+  humanURL: https://api.timeswap.io/docs
+  baseURL: https://api.timeswap.io
+  tags:
+  - FastAPI
+  properties:
+  - type: OpenAPI
+    url: openapi/timeswap-fastapi-api-openapi.yml
+  - type: APIReference
+    url: https://api.timeswap.io/docs
+- aid: timeswap:timeswap-paulygon-api
+  name: Timeswap Paulygon API
+  description: The Paulygon API from Timeswap — 1 operation(s) for paulygon.
+  humanURL: https://api.timeswap.io/docs
+  baseURL: https://api.timeswap.io
+  tags:
+  - Paulygon
+  properties:
+  - type: OpenAPI
+    url: openapi/timeswap-paulygon-api-openapi.yml
+  - type: APIReference
+    url: https://api.timeswap.io/docs
+- aid: timeswap:timeswap-pools-api
+  name: Timeswap Pools API
+  description: The Pools API from Timeswap — 10 operation(s) for pools.
+  humanURL: https://api.timeswap.io/docs
+  baseURL: https://api.timeswap.io
+  tags:
+  - Pools
+  properties:
+  - type: OpenAPI
+    url: openapi/timeswap-pools-api-openapi.yml
+  - type: APIReference
+    url: https://api.timeswap.io/docs
+- aid: timeswap:timeswap-taskon-api
+  name: Timeswap TaskON API
+  description: The TaskON API from Timeswap — 1 operation(s) for taskon.
+  humanURL: https://api.timeswap.io/docs
+  baseURL: https://api.timeswap.io
+  tags:
+  - TaskON
+  properties:
+  - type: OpenAPI
+    url: openapi/timeswap-taskon-api-openapi.yml
+  - type: APIReference
+    url: https://api.timeswap.io/docs
+- aid: timeswap:timeswap-token-api
+  name: Timeswap Token API
+  description: The Token API from Timeswap — 1 operation(s) for token.
+  humanURL: https://api.timeswap.io/docs
+  baseURL: https://api.timeswap.io
+  tags:
+  - Token
+  properties:
+  - type: OpenAPI
+    url: openapi/timeswap-token-api-openapi.yml
+  - type: APIReference
+    url: https://api.timeswap.io/docs
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
 - FN: APIs.json
   email: info@apis.io
 common:
+- type: DomainSecurity
+  url: security/timeswap-domain-security.yml
 - type: Website
   url: https://timeswap.io
+- type: Documentation
+  url: https://timeswap.gitbook.io/docs
+- type: GitHubOrganization
+  url: https://github.com/Timeswap-Labs
+- type: Blog
+  url: https://timeswap.medium.com/
+- type: Support
+  url: https://discord.com/invite/timeswap
+- type: Twitter
+  url: https://twitter.com/TimeswapLabs
+- type: Telegram
+  url: https://t.me/timeswap
+- type: Whitepaper
+  url: https://timeswap.io/whitepaper.pdf
+- type: TermsOfService
+  url: https://timeswap.io/terms/
+- type: Packages
+  url: packages/timeswap-packages.yml
+- type: SDKs
+  url: packages/timeswap-packages.yml
+- type: WellKnown
+  url: well-known/timeswap-well-known.yml
+- type: MCPServer
+  url: mcp/timeswap-mcp.yml
+- type: LLMsTxt
+  url: llms/timeswap-llms.txt
+- type: Conformance
+  url: conformance/timeswap-conformance.yml
+- type: Compliance
+  url: https://timeswap.gitbook.io/docs/audits
+- type: ErrorCatalog
+  url: errors/timeswap-problem-types.yml
+- type: Lifecycle
+  url: lifecycle/timeswap-lifecycle.yml
+- type: Authentication
+  url: authentication/timeswap-authentication.yml
+- type: Conventions
+  url: conventions/timeswap-conventions.yml
+- type: DataModel
+  url: data-model/timeswap-data-model.yml
+- type: AgentSkill
+  url: skills/_index.yml
+x-enrichment:
+  date: '2026-07-21'
+  status: enriched
+  artifacts_added: 15
+  pass: local-v1

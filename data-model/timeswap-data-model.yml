@@ -1,0 +1,36 @@
+generated: '2026-07-21'
+method: derived
+source: openapi/timeswap-api-openapi.json
+notes: >-
+  Entity graph derived from the query parameters and paths of the live
+  api.timeswap.io OpenAPI (the spec publishes no response schemas beyond the
+  validation-error envelope, so entities come from parameter names and the
+  protocol docs). A Timeswap V2 pool is a fixed-maturity money market for a
+  token pair on a specific chain.
+entities:
+  - name: Pool
+    description: A Timeswap fixed-maturity lending pool for a token pair, identified by poolId, with a cap.
+    key: poolId
+  - name: Token
+    description: An ERC-20 token tracked by the pools service, identified by chain + contract address, with a spot price.
+    key: [chainId, address]
+  - name: Chain
+    description: An EVM network the protocol is deployed on, identified by chainId.
+    key: chainId
+relationships:
+  - from: Pool
+    to: Token
+    kind: has_one
+    via: token0_address
+  - from: Pool
+    to: Token
+    kind: has_one
+    via: token1_address
+  - from: Pool
+    to: Chain
+    kind: belongs_to
+    via: chain_id
+  - from: Token
+    to: Chain
+    kind: belongs_to
+    via: chainId

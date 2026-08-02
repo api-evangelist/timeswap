@@ -1,0 +1,11 @@
+generated: '2026-07-21'
+method: generated
+skills:
+  - file: timeswap-query-pools-and-prices.md
+    name: Query Timeswap pools and token prices
+    api: openapi/timeswap-api-openapi.json
+    operations:
+      - submit_token_pools_tokens_get_get
+      - get_pool_pools_pools_get_get
+      - get_cap_pools_cap_get
+      - submit_token_token_spotPrice_get

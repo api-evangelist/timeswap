@@ -1,0 +1,48 @@
+# API Evangelist enhancement overlay — never mutates the harvested original.
+overlay: 1.0.0
+info:
+  title: API Evangelist enhancements for the Timeswap API
+  version: 1.0.0
+extends: openapi/timeswap-api-openapi.json
+actions:
+  - target: $.info
+    update:
+      title: Timeswap API
+      description: >-
+        Backend data API for the Timeswap protocol dApp — pools, tokens, caps,
+        and token spot prices for Timeswap V2 fixed-maturity lending markets.
+        Publicly readable; write operations are used by the Timeswap team to
+        maintain the pool/token registry.
+      contact:
+        name: Timeswap Labs
+        url: https://timeswap.io
+      x-apievangelist:
+        provider: timeswap
+        harvested: '2026-07-21'
+        source: https://api.timeswap.io/openapi.json
+  - target: $
+    update:
+      servers:
+        - url: https://api.timeswap.io
+          description: Production
+  - target: $.paths['/pools/pools/get'].get
+    update:
+      tags: [Pools]
+  - target: $.paths['/pools/cap'].get
+    update:
+      tags: [Pools]
+  - target: $.paths['/pools/tokens/get'].get
+    update:
+      tags: [Tokens]
+  - target: $.paths['/token/spotPrice'].get
+    update:
+      tags: [Prices]
+  - target: $.paths['/pools/tokens/aura-price'].get
+    update:
+      tags: [Prices]
+  - target: $.paths['/pools/tokens/pendle-price'].get
+    update:
+      tags: [Prices]
+  - target: $.paths['/pools/tokens/pendle-glp-price'].get
+    update:
+      tags: [Prices]

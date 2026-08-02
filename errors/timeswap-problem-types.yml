@@ -1,0 +1,30 @@
+generated: '2026-07-21'
+method: derived
+source: openapi/timeswap-api-openapi.json
+format: fastapi-validation
+notes: >-
+  Derived from the 4xx responses declared in the live api.timeswap.io OpenAPI.
+  The API is a FastAPI service: the only documented error shape is the 422
+  HTTPValidationError envelope (detail[] of ValidationError objects with
+  loc/msg/type). No application/problem+json (RFC 9457) responses and no
+  documented error-code registry were found in the docs.
+problems:
+  - status: 422
+    title: Validation Error
+    schema: HTTPValidationError
+    content_type: application/json
+    shape:
+      detail:
+        - loc: [array of string|integer — location of the invalid field]
+          msg: string — human-readable message
+          type: string — error type identifier
+    source_operations:
+      - openapi/timeswap-api-openapi.json#get_quest_data_taskON_quest_get
+      - openapi/timeswap-api-openapi.json#getQuestData_paulygon_test_quest_get
+      - openapi/timeswap-api-openapi.json#submit_token_token_spotPrice_get
+      - openapi/timeswap-api-openapi.json#submit_token_pools_tokens_get_get
+      - openapi/timeswap-api-openapi.json#get_cap_pools_cap_get
+      - openapi/timeswap-api-openapi.json#get_pool_pools_pools_get_get
+      - openapi/timeswap-api-openapi.json#get_price_pools_tokens_aura_price_get
+      - openapi/timeswap-api-openapi.json#pendle_price_pools_tokens_pendle_price_get
+      - openapi/timeswap-api-openapi.json#pendle_glp_pools_tokens_pendle_glp_price_get

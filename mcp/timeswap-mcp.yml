@@ -1,0 +1,35 @@
+generated: '2026-07-21'
+method: derived
+status: candidate
+source: openapi/timeswap-api-openapi.json
+notes: >-
+  No official hosted or published Timeswap MCP server was found (none in the
+  GitHub org, npm scope, or docs). This is a candidate tool list derived from
+  the read-only operations of the live api.timeswap.io OpenAPI
+  (https://api.timeswap.io/openapi.json). Write/admin operations
+  (pool/token submission and updates) are excluded from the candidate surface.
+server:
+  name: timeswap
+  transport: http
+tools:
+  - name: get_pools
+    description: Retrieve Timeswap V2 pools, optionally filtered by chain and token pair.
+    source_operation: openapi/timeswap-api-openapi.json#get_pool_pools_pools_get_get
+  - name: get_pool_cap
+    description: Get the cap for a specific Timeswap pool by poolId.
+    source_operation: openapi/timeswap-api-openapi.json#get_cap_pools_cap_get
+  - name: get_tokens
+    description: List tokens known to the Timeswap pools service for a chain.
+    source_operation: openapi/timeswap-api-openapi.json#submit_token_pools_tokens_get_get
+  - name: get_token_spot_price
+    description: Get the spot price for a token by chainId and address.
+    source_operation: openapi/timeswap-api-openapi.json#submit_token_token_spotPrice_get
+  - name: get_aura_price
+    description: Get the Aura token price used by Timeswap pools.
+    source_operation: openapi/timeswap-api-openapi.json#get_price_pools_tokens_aura_price_get
+  - name: get_pendle_price
+    description: Get the Pendle token price used by Timeswap pools.
+    source_operation: openapi/timeswap-api-openapi.json#pendle_price_pools_tokens_pendle_price_get
+  - name: get_pendle_glp_price
+    description: Get the Pendle GLP price used by Timeswap pools.
+    source_operation: openapi/timeswap-api-openapi.json#pendle_glp_pools_tokens_pendle_glp_price_get

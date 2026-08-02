@@ -1,0 +1,54 @@
+generated: '2026-07-21'
+method: searched
+source: https://registry.npmjs.org/-/v1/search?text=timeswap
+notes: >-
+  First-party client libraries published by Timeswap Labs under the @timeswap-labs
+  npm scope. All are TypeScript packages for interacting with the Timeswap V1
+  protocol contracts. No PyPI, Maven, NuGet, RubyGems, Packagist, or crates.io
+  packages were found (PyPI /pypi/timeswap/json returned 404). The Timeswap V2
+  protocol is consumed directly via its Solidity contracts
+  (github.com/Timeswap-Labs/Timeswap-V2-Contracts); no V2 SDK package was found.
+packages:
+  - language: typescript
+    registry: npm
+    name: "@timeswap-labs/timeswap-v1-sdk"
+    version: 1.2.13-Beta
+    url: https://www.npmjs.com/package/@timeswap-labs/timeswap-v1-sdk
+    install: npm install @timeswap-labs/timeswap-v1-sdk
+    repository: https://github.com/Timeswap-Labs/Timeswap-V1-SDK
+    official: true
+    description: Software Developer Kit to interact with the Timeswap protocol.
+  - language: typescript
+    registry: npm
+    name: "@timeswap-labs/timeswap-v1-sdk-core"
+    version: 1.2.5-Beta
+    url: https://www.npmjs.com/package/@timeswap-labs/timeswap-v1-sdk-core
+    install: npm install @timeswap-labs/timeswap-v1-sdk-core
+    official: true
+    description: Core entities and math for the Timeswap V1 SDK.
+  - language: typescript
+    registry: npm
+    name: "@timeswap-labs/timeswap-v1-core"
+    version: 1.1.5-Beta
+    url: https://www.npmjs.com/package/@timeswap-labs/timeswap-v1-core
+    install: npm install @timeswap-labs/timeswap-v1-core
+    repository: https://github.com/Timeswap-Labs/Timeswap-V1-Core
+    official: true
+    description: Timeswap V1 Core contracts package (BUSL-1.1 licensed).
+  - language: typescript
+    registry: npm
+    name: "@timeswap-labs/timeswap-v1-convenience"
+    version: 1.1.5-Beta
+    url: https://www.npmjs.com/package/@timeswap-labs/timeswap-v1-convenience
+    install: npm install @timeswap-labs/timeswap-v1-convenience
+    repository: https://github.com/Timeswap-Labs/Timeswap-V1-Convenience
+    official: true
+    description: Timeswap V1 Convenience contracts to interact with Timeswap V1 Core.
+  - language: typescript
+    registry: npm
+    name: "@timeswap-labs/flash-repay-sdk"
+    version: 1.0.1-alpha.0
+    url: https://www.npmjs.com/package/@timeswap-labs/flash-repay-sdk
+    install: npm install @timeswap-labs/flash-repay-sdk
+    official: true
+    description: SDK for flash repayment flows on the Timeswap protocol.

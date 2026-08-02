@@ -1,0 +1,27 @@
+generated: '2026-07-21'
+method: searched
+source: https://timeswap.gitbook.io/docs
+notes: >-
+  Timeswap versions at the protocol level: V1 (2021 contracts, TypeScript SDK)
+  and V2 (current, github.com/Timeswap-Labs/Timeswap-V2-Contracts, deployed
+  addresses listed in the docs). No formal API versioning policy, deprecation
+  policy, Sunset/Deprecation header support, SLA, or status page is published
+  (status.timeswap.io does not resolve; analytics.timeswap.io returned 502).
+  V1 packages remain on npm in Beta but active development is on V2.
+versioning:
+  scheme: protocol-generation
+  current: V2
+  docs: https://timeswap.gitbook.io/docs/developers/deployed-v2-contracts
+  history:
+    - version: V1
+      status: superseded
+      artifacts: npm @timeswap-labs/timeswap-v1-* packages, Timeswap-V1-Core/-Convenience/-SDK repos
+    - version: V2
+      status: current
+      artifacts: github.com/Timeswap-Labs/Timeswap-V2-Contracts
+deprecation:
+  policy_url: null
+  sunset_header: false
+sla: null
+status_page: null
+deprecated_operations: []
