@@ -1,0 +1,36 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Fast FastAPI Paulygon API",
+    "version": "0.1.0"
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Paulygon",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Getquestdata",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "{{baseUrl}}/paulygon/test-quest",
+            "params": [
+              {
+                "name": "wallet",
+                "value": "",
+                "type": "query"
+              }
+            ]
+          },
+          "docs": "Getquestdata"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

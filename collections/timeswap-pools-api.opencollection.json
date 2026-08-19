@@ -1,0 +1,185 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Fast FastAPI Pools API",
+    "version": "0.1.0"
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Pools",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Submit Token",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "{{baseUrl}}/pools/tokens/post"
+          },
+          "docs": "Submit Token"
+        },
+        {
+          "info": {
+            "name": "Submit Token",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "{{baseUrl}}/pools/tokens/get",
+            "params": [
+              {
+                "name": "chain_id",
+                "value": "",
+                "type": "query"
+              }
+            ]
+          },
+          "docs": "Submit Token"
+        },
+        {
+          "info": {
+            "name": "Submit Pool",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "{{baseUrl}}/pools/pools/post"
+          },
+          "docs": "Submit Pool"
+        },
+        {
+          "info": {
+            "name": "Get Cap",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "{{baseUrl}}/pools/cap",
+            "params": [
+              {
+                "name": "poolId",
+                "value": "",
+                "type": "query"
+              }
+            ]
+          },
+          "docs": "Get Cap"
+        },
+        {
+          "info": {
+            "name": "Get Pool",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "{{baseUrl}}/pools/pools/get",
+            "params": [
+              {
+                "name": "chain_id",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "token0_address",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "token1_address",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "is_prod",
+                "value": "",
+                "type": "query"
+              }
+            ]
+          },
+          "docs": "Get Pool"
+        },
+        {
+          "info": {
+            "name": "Update Pool",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "{{baseUrl}}/pools/pools/update"
+          },
+          "docs": "Update Pool"
+        },
+        {
+          "info": {
+            "name": "Update Pool",
+            "type": "http"
+          },
+          "http": {
+            "method": "PUT",
+            "url": "{{baseUrl}}/pools/pools/update/contractsVersion"
+          },
+          "docs": "Update Pool"
+        },
+        {
+          "info": {
+            "name": "Get Price",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "{{baseUrl}}/pools/tokens/aura-price",
+            "params": [
+              {
+                "name": "refresh",
+                "value": "",
+                "type": "query"
+              }
+            ]
+          },
+          "docs": "Get Price"
+        },
+        {
+          "info": {
+            "name": "Pendle Price",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "{{baseUrl}}/pools/tokens/pendle-price",
+            "params": [
+              {
+                "name": "refresh",
+                "value": "",
+                "type": "query"
+              }
+            ]
+          },
+          "docs": "Pendle Price"
+        },
+        {
+          "info": {
+            "name": "Pendle Glp",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "{{baseUrl}}/pools/tokens/pendle-glp-price",
+            "params": [
+              {
+                "name": "refresh",
+                "value": "",
+                "type": "query"
+              }
+            ]
+          },
+          "docs": "Pendle Glp"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

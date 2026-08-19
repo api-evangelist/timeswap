@@ -1,0 +1,36 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Fast FastAPI TaskON API",
+    "version": "0.1.0"
+  },
+  "items": [
+    {
+      "info": {
+        "name": "TaskON",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Get Quest Data",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "{{baseUrl}}/taskON/quest",
+            "params": [
+              {
+                "name": "address",
+                "value": "",
+                "type": "query"
+              }
+            ]
+          },
+          "docs": "Get Quest Data"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}
