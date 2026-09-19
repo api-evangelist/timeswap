@@ -107,6 +107,8 @@ apis:
   humanURL: https://api.timeswap.io/docs
   baseURL: https://api.timeswap.io
   tags:
+  - Tokens
+  tags_raw:
   - Token
   properties:
   - type: OpenAPI
