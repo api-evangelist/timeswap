@@ -1,11 +1,7 @@
 {
   "provider": "timeswap",
   "sources": [
-    "timeswap-fastapi-api-openapi.yml",
-    "timeswap-paulygon-api-openapi.yml",
-    "timeswap-pools-api-openapi.yml",
-    "timeswap-taskon-api-openapi.yml",
-    "timeswap-token-api-openapi.yml"
+    "_original/timeswap-api-openapi.json"
   ],
   "outputs": [
     "timeswap-fastapi-api-openapi.yml",
@@ -17,6 +13,35 @@
   "archived": [],
   "errors": [],
   "warnings": [],
-  "notes": [],
-  "skipped": []
+  "notes": [
+    "sourced from openapi/_original/ (1 archived document(s)); previously refined output at the top level was skipped rather than re-split",
+    "timeswap-api-openapi.json: upgraded openapi 3.0.2 -> OpenAPI 3.2.0",
+    "timeswap-api-openapi.json: tagged paths GET / -> FastAPI",
+    "timeswap-api-openapi.json: tagged paths GET /taskON/quest -> TaskON",
+    "timeswap-api-openapi.json: tagged paths GET /paulygon/test-quest -> Paulygon",
+    "timeswap-api-openapi.json: tagged paths GET /token/spotPrice -> Token",
+    "timeswap-api-openapi.json: tagged paths POST /pools/tokens/post -> Pools",
+    "timeswap-api-openapi.json: tagged paths GET /pools/tokens/get -> Pools",
+    "timeswap-api-openapi.json: tagged paths POST /pools/pools/post -> Pools",
+    "timeswap-api-openapi.json: tagged paths GET /pools/cap -> Pools",
+    "timeswap-api-openapi.json: tagged paths GET /pools/pools/get -> Pools",
+    "timeswap-api-openapi.json: tagged paths POST /pools/pools/update -> Pools",
+    "timeswap-api-openapi.json: tagged paths PUT /pools/pools/update/contractsVersion -> Pools",
+    "timeswap-api-openapi.json: tagged paths GET /pools/tokens/aura-price -> Pools",
+    "timeswap-api-openapi.json: tagged paths GET /pools/tokens/pendle-price -> Pools",
+    "timeswap-api-openapi.json: tagged paths GET /pools/tokens/pendle-glp-price -> Pools",
+    "timeswap-api-openapi.json: declared missing tag: FastAPI",
+    "timeswap-api-openapi.json: declared missing tag: Paulygon",
+    "timeswap-api-openapi.json: declared missing tag: Pools",
+    "timeswap-api-openapi.json: declared missing tag: TaskON",
+    "timeswap-api-openapi.json: declared missing tag: Token",
+    "apis.yml register: already-registered"
+  ],
+  "skipped": [
+    "timeswap-fastapi-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "timeswap-paulygon-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "timeswap-pools-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "timeswap-taskon-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "timeswap-token-api-openapi.yml: previously refined output, superseded by openapi/_original/"
+  ]
 }
