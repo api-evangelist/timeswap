@@ -52,6 +52,8 @@ tags:
 - Liquidity Pools
 - Fixed Income
 - Blockchain
+- Web3
+- Cryptocurrency
 apis:
 - aid: timeswap:timeswap-fastapi-api
   name: Timeswap FastAPI API
